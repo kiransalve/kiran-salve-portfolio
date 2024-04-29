@@ -1,7 +1,13 @@
+"use client";
 import Link from "next/link";
-import React from "react";
-
+import React, { useState } from "react";
+import { ImCross } from "react-icons/im";
+import { LuMenu } from "react-icons/lu";
 const Header = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleNavbar = () => {
+    setMobileMenu(!mobileMenu);
+  };
   const navlink = [
     {
       path: "/",
@@ -47,7 +53,36 @@ const Header = () => {
               Create an account
             </Link>
           </div>
+          <div className="lg:hidden md:flex flex-col justify-end">
+            <button onClick={toggleNavbar}>
+              {mobileMenu ? <ImCross size={20} /> : <LuMenu size={20} />}
+            </button>
+          </div>
         </div>
+        {mobileMenu && (
+          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+            <ul>
+              {navlink.map((item, index) => (
+                <li key={index} className="py-4">
+                  <Link href={item.path} className="">
+                    {item.title.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="flex space-x-6">
+              <Link href={"/signin"} className="py-2 px-3 border rounded-md">
+                Sing In
+              </Link>
+              <Link
+                className="bg-gradient-to-r from-orange-600 to-orange-900 py-2 px-3 rounded-md "
+                href={"/signup"}
+              >
+                Create an account
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
