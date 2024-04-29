@@ -74,10 +74,7 @@ const Header = () => {
               <Link href={"/signin"} className="py-2 px-3 border rounded-md">
                 Sing In
               </Link>
-              <Link
-                className="bg-gradient-to-r from-orange-600 to-orange-900 py-2 px-3 rounded-md "
-                href={"/signup"}
-              >
+              <Link className="gradient " href={"/signup"}>
                 Create an account
               </Link>
             </div>
