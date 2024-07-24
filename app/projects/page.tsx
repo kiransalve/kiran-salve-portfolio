@@ -37,11 +37,11 @@ const Projects = () => {
   return (
     <div className="">
       <div className="text-center text-2xl font-bold mb-4">My Projects</div>
-      <div className="mx-auto gap-6 flex max-w-7xl flex-wrap justify-center xl:justify-start items-center ">
+      <div className="mx-auto gap-6 flex max-w-7xl flex-wrap justify-center xl:justify-start items-center">
         {projectData.map(
           ({ githubLink, liveLink, subtitle, title, imgUrl }, index) => (
             <div
-              className="rounded-md cursor-pointer flex flex-col md:flex-row h-full p-1"
+              className="rounded-md cursor-pointer flex flex-col md:flex-row h-full p-1 md:mx-0 mx-10"
               key={index}
             >
               <div className="flex flex-wrap gap-5 text-center ">

@@ -10,7 +10,7 @@ const name = "Kiran Salve";
 const designation = "React JS Developer";
 
 const summary = (
-  <p className="flex flex-col gap-2">
+  <p className="flex flex-col gap-5">
     <div className="">
       I am <span className="text-yellow-500">{designation}</span> based in
       Mumbai, India.
@@ -19,12 +19,10 @@ const summary = (
       Skilled in crafting Figma designs to interactive and responsive Next.js
       applications with Tailwind CSS.
     </div>
-    <div className="">
+    <Link href={"/projects"}>
       You can see my front end{" "}
-      <Link href={"/projects"} className="text-yellow-400 underline">
-        projects
-      </Link>
-    </div>
+      <span className="text-yellow-400 underline">projects</span>
+    </Link>
   </p>
 );
 
