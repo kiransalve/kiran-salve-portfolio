@@ -1,9 +1,12 @@
-import Hero from "./components/Hero/Hero";
+import React from "react";
+import HomePage from "./home/HomePage";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="">
-      <Hero />
+    <div>
+      <HomePage />
     </div>
   );
-}
+};
+
+export default Home;

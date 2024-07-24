@@ -8,11 +8,10 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(30, 31, 30);
-  color: bisque;
+  background-color: black;
+  color: aliceblue;
 }
-@layer components {
-  .gradient {
-    @apply bg-gradient-to-r from-orange-600 to-orange-900 py-3 px-4 rounded-md;
-  }
+
+.btn {
+  @apply p-2 rounded-md hover:bg-white hover:text-slate-900 font-bold cursor-pointer;
 }
