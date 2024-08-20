@@ -15,3 +15,34 @@ body {
 .btn {
   @apply p-2 rounded-md hover:bg-white hover:text-slate-900 font-bold cursor-pointer;
 }
+
+/* for name */
+.typewriter-glow {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ff6600;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffcc00;
+  }
+}

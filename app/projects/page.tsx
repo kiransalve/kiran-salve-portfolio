@@ -45,7 +45,7 @@ const Projects = () => {
               key={index}
             >
               <div className="flex flex-wrap gap-5 text-center ">
-                <div className="flex flex-col items-center gap-4 rounded-md mx-auto md:mx-0 border-b">
+                <div className="flex flex-col items-center gap-4 rounded-md mx-auto md:mx-0">
                   <Image
                     src={imgUrl}
                     width={350}

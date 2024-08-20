@@ -1,9 +1,9 @@
 import React from "react";
-import HomePage from "./home/HomePage";
+import HomePage from "./components/home/HomePage";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full h-full overflow-hidden">
       <HomePage />
     </div>
   );
