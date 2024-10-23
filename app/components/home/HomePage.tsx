@@ -5,12 +5,13 @@ import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const name = "Kiran Salve";
-const designation = "React JS Developer";
+const designation = "Power BI Developer";
 
 const summaryText = [
   `I am ${designation} based in Mumbai`,
-  "Skilled in crafting Figma designs to interactive and responsive Next.js applications with Tailwind CSS.",
-  "You can see my front end",
+  "with 6+ years of experience in data analysis and creating dashboard.",
+  "Highly skilled in transforming data into actionable insights.",
+  "You can see my Data Analysis",
 ];
 
 const socialData = [
@@ -19,7 +20,7 @@ const socialData = [
     icon: <FaLinkedin size={24} />,
   },
   {
-    link: "https://github.com/kiransalve",
+    link: "https://github.com/salvekiran",
     icon: <FaGithub size={24} />,
   },
   {
@@ -72,8 +73,8 @@ const HomePage = () => {
             alt="photo"
             className="rounded-[50%]"
           />
-          <div className="font-bold text-[20px] ">{name}</div>
-          <div className="animating-rays">{designation}</div>
+          <div className="font-bold text-[20px]">{name}</div>
+          <div className="text-yellow-400 font-bold">{designation}</div>
 
           <div className="flex gap-5">
             {socialData.map((item, index) => (
@@ -85,8 +86,8 @@ const HomePage = () => {
             ))}
           </div>
 
-          <div className="px-4 mb-4 max-w-[440px] mx-auto">
-            <p className="whitespace-pre-wrap leading-relaxed neon-glow ">
+          <div className="px-4 mb-4 max-w-[440px] md:w-full text-center mx-auto">
+            <p className="whitespace-pre-wrap leading-relaxed ">
               {currentText}{" "}
               {typingComplete && (
                 <Link href="/projects" className="text-yellow-400 underline">
