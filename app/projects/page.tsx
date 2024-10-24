@@ -15,7 +15,6 @@ const skillData = [
 const Projects = () => {
   const [selectedSkill, setSelectedSkill] = useState("All");
 
-  // Filter the projects based on the selected skill
   const filteredProjects =
     selectedSkill === "All"
       ? projectData
@@ -25,9 +24,7 @@ const Projects = () => {
     <div className="p-4">
       <div className="text-center text-2xl font-bold mb-6">My Projects</div>
 
-      {/* Skill filter buttons */}
       <div className="flex gap-5 w-full justify-center my-4">
-        {/* Show an 'All' button to show all projects */}
         <div
           className={`cursor-pointer flex flex-col items-center justify-center ${
             selectedSkill === "All" ? "font-bold text-yellow-500" : ""
@@ -52,31 +49,30 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Project grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center w-full">
         {filteredProjects.map(
           ({ githubLink, subtitle, title, imgUrl, videoUrl }, index) => (
             <div
-              className="relative rounded-md cursor-pointer overflow-hidden max-w-[270px] mx-auto"
+              className="relative rounded-md cursor-pointer overflow-hidden max-w-[270px] mx-auto bg-slate-800"
               key={index}
             >
               <Image
                 src={imgUrl}
                 width={290}
-                height={270} // Adjust height to be more uniform
+                height={270}
                 alt={title}
                 className="rounded-md object-cover h-[150px]"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white opacity-0 transition-opacity duration-300 hover:opacity-100">
+              <div className="flex flex-col items-center my-3 ">
                 <div className="font-semibold text-md text-yellow-500">
                   {title}
                 </div>
-                <div className="flex-grow h-[100px] px-2 text-center text-sm">
+                <div className="flex-grow h-[70px] px-2 text-center text-sm">
                   {subtitle}
                 </div>
                 <div className="flex gap-3 mb-3">
                   <Link
-                    className="btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+                    className="btn bg-blue-500 text-white px-4 rounded-md hover:bg-blue-600 transition"
                     href={githubLink}
                     target="_blank"
                     aria-label={`View ${title} on GitHub`}
