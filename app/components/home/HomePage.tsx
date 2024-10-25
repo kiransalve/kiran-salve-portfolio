@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const name = "Kiran Salve";
@@ -27,7 +27,7 @@ const socialData = [
     icon: <FaTwitter size={24} />,
   },
   {
-    link: "https://www.instagram.com/kironsalve/",
+    link: "https://www.instagram.com/ks_rays/",
     icon: <FaInstagram size={24} />,
   },
 ];
