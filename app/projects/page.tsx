@@ -1,56 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { SiPowerbi, SiMicrosoftexcel, SiPython, SiMysql } from "react-icons/si";
+import React from "react";
 import { projectData } from "../../data/projectdata";
 
-const skillData = [
-  { Icon: SiPowerbi, title: "Power BI" },
-  { Icon: SiMicrosoftexcel, title: "Excel" },
-  { Icon: SiPython, title: "Python" },
-  { Icon: SiMysql, title: "SQL" },
-];
-
 const Projects = () => {
-  const [selectedSkill, setSelectedSkill] = useState("All");
-
-  const filteredProjects =
-    selectedSkill === "All"
-      ? projectData
-      : projectData.filter((project) => project.skill === selectedSkill);
-
   return (
     <div className="p-4">
       <div className="text-center text-2xl font-bold mb-6">My Projects</div>
 
-      <div className="flex gap-5 w-full justify-center my-4">
-        <div
-          className={`cursor-pointer flex flex-col items-center justify-center ${
-            selectedSkill === "All" ? "font-bold text-yellow-500" : ""
-          }`}
-          onClick={() => setSelectedSkill("All")}
-        >
-          All
-        </div>
-        {skillData.map(({ Icon, title }, index) => (
-          <div
-            key={index}
-            className={`cursor-pointer flex flex-col items-center  ${
-              selectedSkill === title ? "font-bold text-yellow-500" : ""
-            }`}
-            onClick={() => setSelectedSkill(title)}
-          >
-            <div className="text-2xl md:text-3xl">
-              <Icon />
-            </div>
-            <div>{title}</div>
-          </div>
-        ))}
-      </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center w-full">
-        {filteredProjects.map(
+        {projectData.map(
           ({ githubLink, subtitle, title, imgUrl, videoUrl }, index) => (
             <div
               className="relative rounded-md cursor-pointer overflow-hidden max-w-[270px] mx-auto bg-slate-800"

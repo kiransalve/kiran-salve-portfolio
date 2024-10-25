@@ -9,9 +9,8 @@ const designation = "Power BI Developer";
 
 const summaryText = [
   `I am ${designation} based in Mumbai`,
-  "with 6+ years of experience in data analysis and creating dashboard.",
-  "Highly skilled in transforming data into actionable insights.",
-  "You can see my Data Analysis",
+  "Have 6+ years of experience in Data Analysis for Sales & Marketing Team.",
+  "",
 ];
 
 const socialData = [
@@ -34,34 +33,6 @@ const socialData = [
 ];
 
 const HomePage = () => {
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [typingComplete, setTypingComplete] = useState(false);
-
-  useEffect(() => {
-    if (currentIndex < summaryText.length) {
-      if (charIndex < summaryText[currentIndex].length) {
-        const timeout = setTimeout(() => {
-          setCurrentText((prev) => prev + summaryText[currentIndex][charIndex]);
-          setCharIndex(charIndex + 1);
-        }, 50); // Adjust typing speed here
-        return () => clearTimeout(timeout);
-      } else {
-        const timeout = setTimeout(() => {
-          setCurrentIndex(currentIndex + 1);
-          setCharIndex(0);
-          if (currentIndex === summaryText.length - 1) {
-            setTypingComplete(true);
-          } else {
-            setCurrentText((prev) => prev + "\n");
-          }
-        }, 1000); // Delay before typing next line
-        return () => clearTimeout(timeout);
-      }
-    }
-  }, [charIndex, currentIndex]);
-
   return (
     <div className="w-full h-full">
       <div className="mx-auto">
@@ -86,14 +57,17 @@ const HomePage = () => {
             ))}
           </div>
 
-          <div className="px-4 mb-4 max-w-[440px] md:w-full text-center mx-auto">
-            <p className="whitespace-pre-wrap leading-relaxed ">
-              {currentText}{" "}
-              {typingComplete && (
-                <Link href="/projects" className="text-yellow-400 underline">
-                  projects
-                </Link>
-              )}
+          <div className="px-4 mb-4 max-w-[350px] md:w-full text-justify mx-auto">
+            <p className="text-justify">
+              Professional Power BI Developer with 6+ years of experience in
+              Data Analysis for Sales & Marketing Department of Manufacturing
+              firms, based in Mumbai.
+            </p>
+            <p>
+              You can see my projects{" "}
+              <Link href="/projects" className="text-yellow-400 underline">
+                here
+              </Link>
             </p>
           </div>
         </div>
