@@ -5,13 +5,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const name = "Kiran Salve";
-const designation = "Power BI Developer";
-
-const summaryText = [
-  `I am ${designation} based in Mumbai`,
-  "Have 6+ years of experience in Data Analysis for Sales & Marketing Team.",
-  "",
-];
+const designation = "Data Analyst";
 
 const socialData = [
   {
@@ -59,9 +53,9 @@ const HomePage = () => {
 
           <div className="px-4 mb-4 max-w-[350px] md:w-full text-justify mx-auto">
             <p className="text-justify">
-              Professional Power BI Developer with 6+ years of experience in
-              Data Analysis for Sales & Marketing Department of Manufacturing
-              firms, based in Mumbai.
+              Professional {designation} with 6+ years of experience in Data
+              Analysis for Sales & Marketing and Finance for Manufacturing firm,
+              based in Mumbai.
             </p>
             <p>
               You can see my projects{" "}
