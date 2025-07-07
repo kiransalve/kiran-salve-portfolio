@@ -1,39 +1,11 @@
 export const projectData = [
   {
-    title: "HR Dashboard",
+    title: "Car Sales Dashboard",
     subtitle:
-      "Monitor workforce metrics, employee performance by drill through functionality",
-    githubLink: "https://github.com/salvekiran/PowerBI_HR_Dashboard",
-    imgUrl: "/hr.jpg",
-    videoUrl: "bXuYiLul91s",
-    skill: "Power BI",
-  },
-  {
-    title: "Adidas Sales Dashboard",
-    subtitle:
-      "Visualize sales performance, track revenue, profits by multiple measures same like filter.",
-    githubLink: "https://github.com/salvekiran/PowerBI_Sales_Dashboard_Aadidas",
-    imgUrl: "/adi_sales.jpg",
-    videoUrl: "yXmE4e3dGKQ",
-    skill: "Power BI",
-  },
-  {
-    title: "Blinkit Store Sales Dashboard",
-    subtitle:
-      "Track store sales, inventory, revenue, product performance, and customer trends.",
-    githubLink: "https://github.com/salvekiran/PowerBI_Sales_Dashboard",
-    imgUrl: "/blinkit.jpg",
-    videoUrl: "cbdvQUdvBIo",
-    skill: "Power BI",
-  },
-  {
-    title: "Coffee Shop Sales Dashboard",
-    subtitle:
-      "See details of monthly sales, product performance and daily/hourly basis.",
+      "This dashboard is designed to visualize and analyze key sales metrics for business decision-making.",
     githubLink:
-      "https://github.com/salvekiran/PowerBI_CofeeShop_Sales_Dashboard",
-    imgUrl: "/coffee.jpg",
-    videoUrl: "nivoWqNOlPo",
+      "https://github.com/kiransalve/Power-BI-Projects/tree/main/1.%20Car%20Sales%20Dashboard",
+    imgUrl: "/car_sales.png",
     skill: "Power BI",
   },
 ];

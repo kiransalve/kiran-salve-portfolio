@@ -13,7 +13,7 @@ const socialData = [
     icon: <FaLinkedin size={24} />,
   },
   {
-    link: "https://github.com/salvekiran",
+    link: "https://github.com/kiransalve",
     icon: <FaGithub size={24} />,
   },
   {
