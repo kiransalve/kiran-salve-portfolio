@@ -14,7 +14,7 @@ export const projectData = [
       "This dashboard provides a complete snapshot of inventory performance.",
     githubLink:
       "https://github.com/kiransalve/Power-BI-Projects/tree/main/2.%20Inventory%20Dashboard",
-    imgUrl: "/inv.png",
+    imgUrl: "/inventory.png",
     skill: "Power BI, DAX, Custom Tooltip",
   },
 ];
